@@ -1,9 +1,35 @@
 from graph import Graph
+import argparse, sys
 
-#Start
-periods = input('Number of time periods:\n')
-num_nodes = input('Number of nodes:\n')
-num_columns = input('What is the width of the graph:\n')
+parser = argparse.ArgumentParser()
+parser.add_argument("-p", "--period", type=int, dest="period", help="Number of time periods")
+parser.add_argument("-n", "--nodes", type=int, dest="nodes", help="Number of nodes")
+parser.add_argument("-w", "--width", type=int, dest="width", help="Width of the graph")
+
+args = parser.parse_args()
+
+if args.period:
+    periods = args.period
+else:
+    periods = input('Number of time periods:\n')
+#print(periods)
+
+if args.nodes:
+    num_nodes = args.nodes
+else:
+    num_nodes = input('Number of nodes:\n')
+##print(num_nodes)
+
+if args.width:
+    num_columns = args.width
+else:
+    num_columns = input('What is the width of the graph:\n')
+#print(num_columns)
+
+#for line2 in sys.stdin:
+#    periods = input('Number of time periods:\n')
+#    num_nodes = input('Number of nodes:\n')
+#    num_columns = input('What is the width of the graph:\n')
 
 g = []
 
