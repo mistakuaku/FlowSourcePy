@@ -78,21 +78,23 @@ for i in range(int(periods)):
         print('Expected ', num_nodes, ' nodes, but ', len(f_flows), ' were given in f_flows.')
         quit()
 
-    for j in range (0, (int(num_nodes)-1)):
+    for j in range (0, (int(num_nodes))):
         #print('A')
         #print(j)
         #print('B')
         if r_flows[j] != 0:
+            print('A')
+            print(r_flows[j])
             g[i].addEdge(j, j+1, r_flows[j])
             g[i].addEdge(j+1, j, -1*(r_flows[j]))
         if f_flows[j] != 0:
             g[i].addEdge(j, j+int(num_columns), f_flows[j])
             g[i].addEdge(j+int(num_columns), j, -1*(f_flows[j]))
-    print('A')
-    print(g[i].top_order)
-    print('B')
+    #print('A')
+    #print(g[i].top_order)
+    #print('B')
     g[i].topologicalSort()
-    print(g[i].top_order)
+    #print(g[i].top_order)
 
 #print(*r_flows)
 #print('\n')
