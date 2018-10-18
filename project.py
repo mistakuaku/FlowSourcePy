@@ -83,8 +83,8 @@ for i in range(int(periods)):
         #print(j)
         #print('B')
         if r_flows[j] != 0:
-            print('A')
-            print(r_flows[j])
+            #print('A')
+            #print(r_flows[j])
             g[i].addEdge(j, j+1, r_flows[j])
             g[i].addEdge(j+1, j, -1*(r_flows[j]))
         if f_flows[j] != 0:
@@ -95,6 +95,9 @@ for i in range(int(periods)):
     #print('B')
     g[i].topologicalSort()
     #print(g[i].top_order)
+    for k in range (0, 100):
+        #print(k, ': ', g[i].graph[k])
+        print(k, ' cost: ', g[i].vert_dict[k])
 
 #print(*r_flows)
 #print('\n')
