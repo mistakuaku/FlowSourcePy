@@ -156,29 +156,4 @@ class Graph:
         chunks = [nodes[x:x+(int(self.C))] for x in range(0, len(nodes), int(self.C))]
         x = np.array(chunks)
 
-        fig, ax = plt.subplots()
-
-        #x = np.ma.masked_where(x < 0.05, x)
-        cmap = plt.cm.ocean_r
-        #cmap.set_bad(color='black')
-        cax = ax.imshow(x, cmap=cmap, interpolation='none')
-        ax.set_title('Fraction Through')
-
-##  Start the ticks to start at -0.5 otherwise
-##  the grid lines will cut the nodes in half
-        ax.set_xticks(np.arange(-0.5, int(self.C), 1))
-        ax.set_yticks(np.arange(-0.5, int(self.V)/int(self.C), 1))
-
-##  This will hide the tick labels
-        ax.xaxis.set_ticklabels([])
-        ax.yaxis.set_ticklabels([])
-
-        cbar = fig.colorbar(cax, ticks=[0, int(max(nodes)/4), int(max(nodes)/2), int(max(nodes)*.75), int(max(nodes))])
-        cbar.ax.set_yticklabels(['0', int(max(nodes)/4), int(max(nodes)/2), int(max(nodes)*.75), int(max(nodes))])
-
-        plt.rc('grid', linestyle='solid', color='black')
-        ax.grid(linewidth=2)
-        plt.grid(True)
-        plt.show()
-        #for key in percents:
-        #    print(str(key) + ': ' + str(percents[key]*100))
+        return x, nodes
