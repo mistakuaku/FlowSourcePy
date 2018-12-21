@@ -14,7 +14,6 @@ class Graph:
 ##  Function to add an edge to graph
     def addEdge(self,u,v,cost):
         if cost > 0:
-            ##will this work if cost is negative
             self.graph[u].append(v)
         if u not in self.vert_dict:
             self.vert_dict[u] = {}

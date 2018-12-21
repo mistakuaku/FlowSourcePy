@@ -189,6 +189,7 @@ while(loop):
     'Enter the number of your desired command:\n'
     '1 - Display Neighbors\n'
     '2 - Fraction Through\n'
+    '3 - Display Fraction Through Animation\n'
     '5 - Change time period\n'
     'Type \'quit\' to quit\n')
     if case == '1':

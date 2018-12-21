@@ -1,1 +1,65 @@
-This is my Senior Project
+Welcome to FlowSource Py
+
+To run you need Matplotlib, Numpy, and Python3
+
+Type this to run the program.
+
+python3 project.py
+
+
+Before you run please read this.
+
+Inside the test files are 3 folders with 3 different sets of datapoints.
+
+Copy and paste the text files you want to test with in the same folder as project.py and graph.py
+
+
+To run "well" type this at run time:
+
+For period use: 1
+
+Nodes: 100
+
+Width: 10
+
+
+Select option 2 to display the graph.
+
+Node: 44
+
+Type quit to quit.
+
+
+To run "paper" type this at run time:
+
+For period use: 1
+
+Nodes: 20
+
+Width: 5
+
+
+Select option 2 to display the graph.
+
+Node: 6
+
+Type quit to quit.
+
+To run "animation" type this at run time:
+
+For period use: 3
+
+Nodes: 100
+
+Width: 10
+
+
+Select option 2 to display the graph.
+
+Node: 44
+
+Select option 3 to display the animation.
+
+Node: 44
+
+Type quit to quit.
